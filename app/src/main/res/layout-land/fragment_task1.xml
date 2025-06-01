@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/task1_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    tools:context=".fragments.Task1Fragment">
+
+    <!-- Row 1: Fragment 1 (20% of total height) -->
+    <fragment
+        android:id="@+id/fragment1"
+        android:name="com.university_assignment.lab4.fragments.Fragment1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20" />
+
+    <!-- Outer container to center this row vertically -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="80"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Inner container: 80% of screen height, centered -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
+            android:orientation="horizontal">
+
+            <!-- Column 1: Fragment 2 + Fragment 3 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <fragment
+                    android:id="@+id/fragment2"
+                    android:name="com.university_assignment.lab4.fragments.Fragment2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <fragment
+                    android:id="@+id/fragment3"
+                    android:name="com.university_assignment.lab4.fragments.Fragment3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <!-- Column 2: Fragment 4 -->
+            <fragment
+                android:id="@+id/fragment4"
+                android:name="com.university_assignment.lab4.fragments.Fragment4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
